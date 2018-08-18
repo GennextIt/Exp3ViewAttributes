@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_background_music" />
+
+    <EditText
+        android:id="@+id/et_music_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Search Music..."
+        android:padding="8dp"
+        android:background="@drawable/bg_edittext"/>
+
+    <Button
+        android:id="@+id/btn__music_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:textColor="#838181"
+        android:textAllCaps="false"
+        android:layout_below="@+id/et_music_search"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_music_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:background="#99000000"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
