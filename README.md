@@ -1,7 +1,8 @@
 # Exp3ViewAttributes
 
+![](website/1.png)
 
-Here are the words we introduced in this video:
+Here are the words we introduced in this above image:
 ```
 XML element
 Tag
