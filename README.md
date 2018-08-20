@@ -1,6 +1,6 @@
 # Exp3ViewAttributes
 
-![](website/1.png)
+![](website/1.PNG)
 
 Here are the words we introduced in this above image:
 ```
