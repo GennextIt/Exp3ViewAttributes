@@ -31,6 +31,16 @@
         android:layout_below="@+id/et_music_search"
         android:layout_centerHorizontal="true"/>
 
+    <Button
+        android:id="@+id/btn__music_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        android:textColor="#838181"
+        android:textAllCaps="false"
+        android:layout_below="@+id/btn__music_search"
+        android:layout_centerHorizontal="true"/>
+
     <TextView
         android:id="@+id/tv_music_detail"
         android:layout_width="match_parent"
