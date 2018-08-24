@@ -1,6 +1,8 @@
 package com.gennextit.exp3viewattributes;
 
+import android.content.Intent;
 import android.os.Build;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -9,7 +11,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowToast;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertEquals;
@@ -58,22 +62,22 @@ public class RobolectricActivityTest {
         assertThat(hello, equalTo("Exp3 ViewAttributes"));
     }
 
-//    @Test
-//    public void buttonClickShouldStartNewActivity() throws Exception {
-//        Button button = (Button) activity.findViewById(R.id.startNextActivity);
-//        button.performClick();
-//        Intent intent = Shadows.shadowOf(activity).peekNextStartedActivity();
-//        assertEquals(RobolectricSecondActivity.class.getCanonicalName(), intent.getComponent().getClassName());
-//    }
-//
-//    @Test
-//    public void testButtonClickShouldShowToast() throws Exception {
-//        RobolectricActivity activity = Robolectric.buildActivity(RobolectricActivity.class).create().get();
-//        Button view = (Button) activity.findViewById(R.id.showToast);
-//        assertNotNull(view);
-//        view.performClick();
-//        assertThat(ShadowToast.getTextOfLatestToast(), equalTo("Lala"));
-//    }
+    @Test
+    public void buttonClickShouldStartNewActivity() throws Exception {
+        Button button = (Button) activity.findViewById(R.id.startNextActivity);
+        button.performClick();
+        Intent intent = Shadows.shadowOf(activity).peekNextStartedActivity();
+        assertEquals(RobolectricSecondActivity.class.getCanonicalName(), intent.getComponent().getClassName());
+    }
+
+    @Test
+    public void testButtonClickShouldShowToast() throws Exception {
+        RobolectricActivity activity = Robolectric.buildActivity(RobolectricActivity.class).create().get();
+        Button view = (Button) activity.findViewById(R.id.showToast);
+        assertNotNull(view);
+        view.performClick();
+        assertThat(ShadowToast.getTextOfLatestToast(), equalTo("Hello world"));
+    }
 
 
 }

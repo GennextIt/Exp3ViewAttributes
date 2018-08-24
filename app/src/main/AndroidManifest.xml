@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RobolectricActivity" />
+        <activity android:name=".RobolectricSecondActivity" />
 
         <meta-data
             android:name="com.parse.push.notification_icon"
